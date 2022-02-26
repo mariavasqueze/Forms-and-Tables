@@ -1,0 +1,174 @@
+body {
+	background-image: url(/images/back.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#wrapper {
+	box-shadow: 0 0 30px 8px black;
+	margin: auto;
+	max-width: 1200px;
+}
+/* Tob bar */
+header {
+	background-color: rgba(215, 176, 127, 0.6);
+	border: 1px solid black;
+}
+img {
+	width: 350px;
+}
+nav {
+	text-align: center;
+	word-spacing: 10px;
+	padding-bottom: 10px;
+}
+a {
+	text-decoration: none;
+	color: #fff;
+}
+/* Survey form section */
+h2 {
+	color: rgb(215, 176, 127);
+	letter-spacing: 5px;
+	position: relative;
+	top: -9px;
+	font-size: 35px;
+}
+p {
+	position: relative;
+	top: -10px;
+}
+#wrapper2 {
+	border: 1px solid black;
+	background-color: rgba(255, 255, 255, 0.5);
+	box-shadow: 0px 0px 10px inset rgb(68, 66, 66);
+}
+#survey-form {
+	background-color: #fff;
+	margin: 10px;
+}
+form {
+	display: flex;
+}
+#left {
+	width: 50%;
+	justify-content: left;
+	margin: 0px 10px;
+}
+#right {
+	width: 50%;
+	justify-content: right;
+	margin: 0px 10px;
+}
+legend {
+	background-color: rgb(215, 176, 127);
+	padding: 5px;
+	color: #fff;
+}
+fieldset {
+	border-radius: 12px;
+	background-color: #efe8ba;
+}
+fieldset label {
+	/* FIX THESE FIELDSETS' INPUT AND LABEL */
+	display: inline-flex;
+	float: left;
+	width: 200px;
+	text-align: left;
+}
+fieldset input {
+	display: inline-flex;
+	float: right;
+}
+/*
+.yes-no {
+    border: 1px solid black;
+    margin: 20px;
+}
+*/
+#buttons {
+	padding: 15px;
+	text-align: center;
+}
+.button {
+	padding: 5px;
+	margin: 0px 10px;
+}
+/* Calendar Section */
+caption {
+	font-size: 1.2em;
+	letter-spacing: 3px;
+	padding-bottom: 10px;
+}
+table {
+	border: 2px solid #8f4519;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+}
+th {
+	background-color: rgb(153, 63, 3);
+	color: white;
+}
+th,
+tr,
+td {
+	width: 100px;
+	height: auto;
+	padding: 5px;
+}
+td {
+	text-align: left;
+	vertical-align: top;
+	color: darkblue;
+	border: 1px solid grey; /* Correct? */
+}
+.february {
+	background-color: rgba(232, 214, 148, 0.6);
+	box-shadow: 0 0 20px inset rgb(68, 66, 66);
+}
+
+span {
+	font-size: 12px;
+}
+
+footer {
+	background-color: rgba(215, 176, 127, 0.6);
+	text-align: center;
+	padding: 2px;
+	color: white;
+	font-size: 12px;
+}
+/* Responsive design */
+@media screen and (max-width: 1024px) {
+	#wrapper {
+		margin: 0px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	form {
+		display: inline-flex;
+		flex-wrap: wrap;
+	}
+	#left,
+	#right {
+		width: 90%;
+	}
+	#calendar {
+		display: none;
+	}
+	a {
+		display: block;
+		width: auto;
+		background-color: rgb(212, 212, 204);
+		color: darkslateblue;
+		padding: 3px;
+		border: 1px solid rgb(68, 66, 66);
+	}
+	nav {
+		padding-bottom: 0px;
+	}
+	header {
+		box-shadow: 0px 0px 5px inset rgb(68, 66, 66);
+	}
+}
