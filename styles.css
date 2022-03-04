@@ -50,12 +50,15 @@ form {
 	display: flex;
 }
 #left {
-	width: 50%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	/* width: 50%; */
 	justify-content: left;
 	margin: 0px 10px;
 }
 #right {
-	width: 50%;
+	/*width: 50%; */
 	justify-content: right;
 	margin: 0px 10px;
 }
@@ -76,6 +79,7 @@ fieldset label {
 	text-align: left;
 }
 fieldset input {
+	width: 300px;
 	display: inline-flex;
 	float: right;
 }
