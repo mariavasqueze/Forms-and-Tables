@@ -57,47 +57,57 @@
                         <option value="mouth-word">Word of Mouth</option>
                         <option value="other">Other</option> <!--Add arrows to box, design?-->
                     </select>
-                    <label for="dish">What's your favourite dich?</label>
+                    <label for="dish">What's your favourite dish?</label>
                     <input type="text" name="dish" id="dish">
                     <label for="times">How many times do you dine out per month?</label>
                     <input type="number" name="times" id="times" value="1">
-                    <input type="checkbox" name="email-list" id="email-list">
-                    <label for="email-list">Add me to your mailing list for great coupons and specials!</label>
+                    <div>
+                        <input type="checkbox" name="email-list" id="email-list">
+                        <label for="email-list" id="checkboxLabel">Add me to your mailing list for great coupons and specials!</label>
+                    </div>
                 </fieldset>
                 <fieldset id="right">
                     <legend>Share Your Experience</legend>
                     <label for="visit">Date of Visit</label>
                     <input type="date" name="visit" id="visit">
+                <div>
                     <label for="order">Order Type</label>
                     <select name="order" id="order">
                         <option value="dine-in">Dine in</option>
                         <option value="delivery"> Delivery</option>
                     </select>
-                    <label for="service">Was your service friendly?</label>
+                </div>
+                    <div>
+                    <label for="service" class="yes-no-align">Was your service friendly?</label>
                     <div class="yes-no">
                         <label for="yes">Yes</label>
                         <input type="radio" name="yes" id="yes">
                         <label for="no">No</label>
                         <input type="radio" name="no" id="no">
                     </div>
-                    <label for="correctness">Was your order correct?</label>
+                </div>
+                <div>
+                    <label for="correctness" class="yes-no-align">Was your order correct?</label>
                     <div class="yes-no">
                         <label for="yes">Yes</label>
                         <input type="radio" name="yes" id="yes">
                         <label for="no">No</label>
                         <input type="radio" name="no" id="no">
                     </div>
-                    <label for="temperature">Was your order hot?</label>
+                </div>
+                    <label for="temperature" class="yes-no-align">Was your order hot?</label>
                     <div class="yes-no">
-                        <label for="yes">Yes</label>
-                        <input type="radio" name="yes" id="yes">
-                        <label for="no">No</label>
-                        <input type="radio" name="no" id="no">
+                        <label for="yes">Yes <input type="radio" name="yes" id="yes"></label>
+                        <label for="no">No <input type="radio" name="no" id="no"></label>         
                     </div>
+                    <div>
                     <label for="level">Rate the overall service (0 = poor; 10 = great)</label>
-                    0<input type="range" name="level" id="level" min="0" max="10" step="1">10
-                    <label for="comments">Tell us about your experience</label>
-                    <textarea name="comments" id="comments" cols="50" rows="7"></textarea>
+                    <input type="range" name="level" id="level" min="0" max="10" step="1">
+                    </div>
+                    <div>
+                        <label for="comments"  id="comment">Tell us about your experience</label>
+                        <textarea name="comments" id="comments" cols="50" rows="7"></textarea>
+                    </div>
                 </fieldset>
             </div>
                 <div id="buttons">
