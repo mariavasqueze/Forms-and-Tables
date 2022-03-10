@@ -52,16 +52,13 @@ p {
 }
 form {
 	display: flex;
-	justify-content: space-between;
 }
 #left {
 	width: 50%;
-	justify-content: left;
 	margin: 0px 10px;
 }
 #right {
-	width: 50%;
-	justify-content: right;
+	width: 50%;	
 	margin: 0px 10px;
 }
 legend {
@@ -76,52 +73,82 @@ fieldset {
 fieldset label {
 	/* FIX THESE FIELDSETS' INPUT AND LABEL */
 	float: left;
-	width: 200px;
-	text-align: left;
-	margin: 3px;
+	min-width: 150px;
+	max-width: 200px;
+	margin-top: 10px;
 }
 fieldset input {
 	width: 50%;
 	display: inline-flex;
 	float: right;
-	margin: 3px;
+	margin-top: 7px;
+}
+.align {
+	align-items: center;
 }
 /* Left side questions */
 #about {
 	width: 50%;
+	float: right;
+	margin: 7px 3px 0px 0px;
 }
-#order {
-	min-width: 250px;
+#dish-title {
+	margin-top: 55px;
+}
+#times-dinning-title {
+	max-width: 80%;
+}
+#times {
+	width: 80px;
+}
+
+#mailing {
+	display: inline-block;
 }
 #checkboxLabel {
-	float: right;
-	margin-top: 10px;
+	max-width: 400px;
 }
 #email-list {
 	float: left;
-	margin-top: 10px;
+	width: max-content;
+	margin: 12px 5px 0px 0px;	
 }
 /* Right questions*/
+#order {
+	min-width: 260px;
+	max-width: 300px;
+	margin: 7px 1px 5px 0px;
+}
 .yes-no {
 	float: right;
 	display: inline-flex;
-	width: 50%;
+	width: 55%;
 	border: 1px solid black;
-	margin: 3px;
-	padding: 5px 0px;
+	margin: 3px 0px;
+	padding: 2px 0px;
+	
 }
 .yes-no-align {
 	margin: 12px 0px;
 }
-
-#comment {
-	display: flex;
-	align-items: left;
-	margin: 20px 0px;
+.yes-no-label {
+	min-width: 50px;
+	text-align: center;
+	margin: 6px 2px 4px 4px;
+}
+.yes-no-input {
+	width: max-content;
+	margin: 4px 8px 0px 6px;
 }
 #level {
-	margin: 12px 0px;
+	margin: 18px 0px;
 }
+
+#comment {
+	min-width: 100%;
+	margin: 20px 0px;
+}
+
 /*Last two buttons of form */
 #buttons {
 	padding: 15px;
@@ -130,6 +157,9 @@ fieldset input {
 .button {
 	padding: 5px;
 	margin: 0px 10px;
+}
+#order {
+	float: right;
 }
 
 /* Calendar Section */
@@ -182,6 +212,12 @@ footer {
 	#wrapper {
 		margin: 0px;
 	}
+	.yes-no {
+		margin: 8px 0px;
+	}
+	.yes-no-align {
+		margin-top: 18px;
+	}
 }
 
 @media screen and (max-width: 768px) {
@@ -192,6 +228,9 @@ footer {
 	#left,
 	#right {
 		width: 90%;
+	}
+	#right {
+		margin-top: 20px;
 	}
 	#calendar {
 		display: none;
@@ -212,5 +251,8 @@ footer {
 	}
 	#about {
 		min-width: 200px;
+	}
+	#order {
+		min-width: 230px;
 	}
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="eng">
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <title>The Spice Bowl</title>
@@ -25,6 +25,7 @@
                 <p>Thank you for taking our customer survey. Your response helps us maintain the tradition that has made us the top-rated place in the metro area. Surveys are private and confidetnial. Spice Bowl will not share your contact information with third parties, ever.</p>
                 <p>Required values are marked by an asterisk (*)</p>
                 <div id="flexbox">
+            
                 <form action="get">
                 <fieldset id="left">
                     <legend>Customer Information</legend>
@@ -34,7 +35,7 @@
                         <option value="Mr."></option>
                         <option value="Mrs."></option>
                         <option value="Ms."></option>
-                    </datalist>
+                    </datalist>                    
                     <label for="customer-name">Name*</label>
                     <input type="text" name="customer-name" id="customer-name" placeholder="first and last name">
                     <label for="address">Street Address</label>
@@ -49,6 +50,7 @@
                     <input type="tel" name="phone" id="phone" placeholder="(nnn) nnn-nnnn">
                     <label for="email">E-mail*</label>
                     <input type="email" name="email" id="email">
+
                     <label for="about">Where did you hear about us? (select all that apply)</label>
                     <select name="about" id="about" size="5">
                         <option value="internet">Internet</option>
@@ -56,16 +58,19 @@
                         <option value="newspaper">Newspaper</option>
                         <option value="mouth-word">Word of Mouth</option>
                         <option value="other">Other</option> <!--Add arrows to box, design?-->
-                    </select>
-                    <label for="dish">What's your favourite dish?</label>
+                    </select>               
+                    <label for="dish" id="dish-title">What's your favourite dish?</label>
                     <input type="text" name="dish" id="dish">
-                    <label for="times">How many times do you dine out per month?</label>
+                    
+                    <label for="times" id="times-dinning-title">How many times do you dine out per month?</label>
                     <input type="number" name="times" id="times" value="1">
-                    <div>
+                    
+                    <div id="mailing">
                         <input type="checkbox" name="email-list" id="email-list">
                         <label for="email-list" id="checkboxLabel">Add me to your mailing list for great coupons and specials!</label>
                     </div>
                 </fieldset>
+                
                 <fieldset id="right">
                     <legend>Share Your Experience</legend>
                     <label for="visit">Date of Visit</label>
@@ -77,37 +82,29 @@
                         <option value="delivery"> Delivery</option>
                     </select>
                 </div>
-                    <div>
-                    <label for="service" class="yes-no-align">Was your service friendly?</label>
+                <div>
+                    <label class="yes-no-align">Was your service friendly?</label>
                     <div class="yes-no">
-                        <label for="yes">Yes</label>
-                        <input type="radio" name="yes" id="yes">
-                        <label for="no">No</label>
-                        <input type="radio" name="no" id="no">
+                        <label for="yes-service" class="yes-no-label">Yes<input type="radio" name="yeyes-services" id="yes-service" class="yes-no-input"></label>
+                        <label for="no-service" class="yes-no-label">No<input type="radio" name="no-service" id="no-service"  class="yes-no-input"></label>
                     </div>
                 </div>
                 <div>
-                    <label for="correctness" class="yes-no-align">Was your order correct?</label>
+                    <label class="yes-no-align">Was your order correct?</label>
                     <div class="yes-no">
-                        <label for="yes">Yes</label>
-                        <input type="radio" name="yes" id="yes">
-                        <label for="no">No</label>
-                        <input type="radio" name="no" id="no">
+                        <label for="yes-correct" class="yes-no-label">Yes <input type="radio" name="yes-correct" id="yes-correct" class="yes-no-input"></label>
+                        <label for="no-correct" class="yes-no-label">No<input type="radio" name="no-correct" id="no-correct" class="yes-no-input"></label>
                     </div>
                 </div>
-                    <label for="temperature" class="yes-no-align">Was your order hot?</label>
+                    <label class="yes-no-align">Was your order hot?</label>
                     <div class="yes-no">
-                        <label for="yes">Yes <input type="radio" name="yes" id="yes"></label>
-                        <label for="no">No <input type="radio" name="no" id="no"></label>         
+                        <label for="yes-hot" class="yes-no-label">Yes <input type="radio" name="yes-hot" id="yes-hot" class="yes-no-input"></label>
+                        <label for="no-hot" class="yes-no-label">No <input type="radio" name="no-hot" id="no-hot"  class="yes-no-input"></label>         
                     </div>
-                    <div>
                     <label for="level">Rate the overall service (0 = poor; 10 = great)</label>
-                    <input type="range" name="level" id="level" min="0" max="10" step="1">
-                    </div>
-                    <div>
-                        <label for="comments"  id="comment">Tell us about your experience</label>
-                        <textarea name="comments" id="comments" cols="50" rows="7"></textarea>
-                    </div>
+                    <input type="range" name="level" id="level" min="0" max="10" step="1">  
+                    <label for="comments"  id="comment">Tell us about your experience!</label>
+                    <textarea name="comments" id="comments" cols="50" rows="6"></textarea>
                 </fieldset>
             </div>
                 <div id="buttons">
@@ -115,19 +112,20 @@
                     <input type="reset" name="cancel" id="cancel" value="Cancel" class="button">
                 </div>
             </form>
+       
             </section>
             <section id="calendar">
                 <table>
                     <caption>February 2022 Calendar</caption>
                     <thead>
                         <tr>
-                            <th scope="column">Sun</th>
-                            <th scope="column">Mon</th>
-                            <th scope="column">Tue</th>
-                            <th scope="column">Wed</th>
-                            <th scope="column">Thu</th>
-                            <th scope="column">Fri</th>
-                            <th scope="column">Sat</th>
+                            <th>Sun</th>
+                            <th>Mon</th>
+                            <th>Tue</th>
+                            <th>Wed</th>
+                            <th>Thu</th>
+                            <th>Fri</th>
+                            <th>Sat</th>
                         </tr>
                     </thead>
                     <tbody>
